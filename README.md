@@ -1,4 +1,4 @@
-# CffdLive.ink
+# CffdLive
 
 To start your Phoenix server:
 
