@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Shrikhand|Source+Sans+Pro:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Sedgwick+Ave+Display');
+@import "./default.css";

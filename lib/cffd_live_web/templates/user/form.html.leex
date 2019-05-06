@@ -1,0 +1,36 @@
+<%= form_for @changeset, "#", [phx_change: :validate, phx_submit: :save], fn f -> %>
+  <%= if @changeset.action do %>
+    <!-- <div class="alert alert-danger"> -->
+      <!-- <p>Oops, something went wrong! Please check the errors below.</p> -->
+    <!-- </div> -->
+  <% end %>
+  <%= inputs_for f, :credential, fn cf -> %>
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/2 mb-4 px-4">
+        <%= text_input cf, :username, placeholder: "Username" %>
+        <%= error_tag cf, :username %>
+      </div>
+      <div class="w-full md:w-1/2 mb-4 px-4">
+        <%= text_input f, :name, placeholder: "Real Name" %>
+        <%= error_tag f, :name %>
+      </div>
+    </div>
+    <div class="mb-4">
+      <%= text_input cf, :email, placeholder: "Email Address" %>
+      <%= error_tag cf, :email %>
+    </div>
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/2 mb-4 px-4">
+        <%= password_input cf, :password, autocomplete: "new-password", value: input_value(cf, :password), placeholder: "Password" %>
+        <%= error_tag cf, :password %>
+      </div>
+      <div class="w-full md:w-1/2 mb-4 px-4">
+        <%= password_input cf, :password_confirmation, autocomplete: "new-password", value: input_value(cf, :password_confirmation), placeholder: "Password Confirm" %>
+        <%= error_tag cf, :password_confirmation %>
+      </div>
+    </div>
+  <% end %>
+  <div class="">
+    <%= submit "Save", class: "submit" %>
+  </div>
+<% end %>

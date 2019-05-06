@@ -1,0 +1,18 @@
+<div class="">
+  <div class="wrapper short">
+    <h1 class="graffiti text-4xl text-purple-700">Authorize</h1>
+    <%= form_for @conn, Routes.session_path(@conn, :create), [method: :post, as: :user], fn f -> %>
+      <div class="mb-4">
+        <%= text_input f, :username_or_email, placeholder: "Username or Email Address" %>
+        <%= error_tag f, :username_or_email %>
+      </div>
+      <div class="mb-4">
+        <%= password_input f, :password, placeholder: "Password" %>
+        <%= error_tag f, :password %>
+      </div>
+      <div class="">
+        <%= submit "Save", class: "submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

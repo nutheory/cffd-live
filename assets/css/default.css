@@ -1,0 +1,97 @@
+body{
+  background: #22292f;
+  color: #fff;
+  background-image: url('../static/images/live.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+input, textarea, input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  width:100% !important;
+  padding:0.5rem !important;
+  border-radius:5px !important;
+  box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.7), 0 1px 1px -1px rgba(255,255,255,0.8) !important;
+  background:rgba(0,0,0,0.3) !important;
+  /* transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important; */
+  /* @include disable; */
+  border:1px solid rgba(0,0,0,1) !important;
+  /* margin-bottom:10px !important; */
+  color:#6E6E6E !important;
+  text-shadow:#000 0px 1px 5px !important;
+}
+
+.help-block{
+  color: crimson;
+  font-size: 0.8rem;
+}
+
+.graffiti{
+  font-family: 'Sedgwick Ave Display', cursive;
+  text-shadow:#90043d 2px 1px 5px;
+}
+
+header{
+  & .title{
+    margin-top: 2rem;
+    & h1{
+      color: #fff;
+      font-family: 'Shrikhand', cursive;
+      text-shadow:#000 0px 2px 8px;
+      font-size: 3.2rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+.t-shadow{
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+.wrapper{
+  background:rgba(34,41,47,0.7);
+  transform: matrix3d(1.205174, -0.21797, 0, 0.000255, 
+                    0.037241, 0.971196, 0, 0.000064, 
+                    0, 0, 1, 0, 
+                    -7.206389, 152.407972, 0, 1);
+  transform-origin: -151px -28px 0px;
+  border:1px solid #9cc4c4;
+  position: absolute;
+  left: 28%;
+  top: 20%;
+  width: 38%;
+  padding: 1.5rem;
+  border-radius:8px;
+  box-shadow: 0 8px 8px rgba(7, 81, 96, .8);
+}
+
+.short{
+  left: 28%;
+  top: 20%;
+  width: 20%;
+}
+
+button.submit{
+  width:100%;
+  padding:10px;
+  border-radius:5px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#606F7B), to(#22292F));
+  background-image: -webkit-linear-gradient(#606F7B 0%, #22292F 100%);
+  background-image: -moz-linear-gradient(#606F7B 0%, #22292F 100%);
+  background-image: -o-linear-gradient(#606F7B 0%, #22292F 100%);
+  background-image: linear-gradient(#606F7B 0%, #22292F 100%);
+  color:#72899b;
+  text-shadow:#000 0px 1px 5px;
+  border:1px solid #000;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.2)));
+}
