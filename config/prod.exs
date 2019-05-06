@@ -13,7 +13,7 @@ use Mix.Config
 config :cffd_live, :lib_path, "/tmp/build/lib"
 
 config :cffd_live, CffdWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
+  load_from_system_env: true,
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
   url: [scheme: "https", host: "cffd-live.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
