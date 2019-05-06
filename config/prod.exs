@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 
-config :cffd, :lib_path, "/tmp/build/lib"
+config :cffd_live, :lib_path, "/tmp/build/lib"
 
 config :cffd_live, CffdWeb.Endpoint,
   http: [port: {:system, "PORT"}],
