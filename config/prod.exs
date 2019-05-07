@@ -12,7 +12,7 @@ use Mix.Config
 
 config :cffd_live, :lib_path, "/tmp/build/lib"
 
-config :cffd_live, CffdWeb.Endpoint,
+config :cffd_live, CffdLiveWeb.Endpoint,
   load_from_system_env: true,
   http: [port: System.get_env("PORT")],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
