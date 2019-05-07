@@ -16,7 +16,7 @@ config :cffd_live, CffdLiveWeb.Endpoint,
   load_from_system_env: true,
   http: [port: System.get_env("PORT")],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  url: [scheme: "https", host: "cffd-live", port: 443],
+  url: [scheme: "https", host: "cffd-live.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
