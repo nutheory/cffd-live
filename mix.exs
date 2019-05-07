@@ -48,7 +48,7 @@ defmodule CffdLive.MixProject do
       {:argon2_elixir, "~> 1.2"},
       {:guardian, "~> 1.2"},
       {:plug_cowboy, "~> 2.0"},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 2.0"}
     ]
   end
 

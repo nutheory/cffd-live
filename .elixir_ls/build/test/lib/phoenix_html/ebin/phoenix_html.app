@@ -1,5 +1,5 @@
 {application,phoenix_html,
-             [{applications,[kernel,stdlib,elixir,logger,plug]},
+             [{applications,[kernel,stdlib,elixir,eex,logger,plug]},
               {description,"Phoenix view functions for working with HTML templates"},
               {modules,['Elixir.Phoenix.HTML','Elixir.Phoenix.HTML.Engine',
                         'Elixir.Phoenix.HTML.Form',
