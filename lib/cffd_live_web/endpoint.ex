@@ -44,5 +44,8 @@ defmodule CffdLiveWeb.Endpoint do
     key: "_cffd_live_key",
     signing_salt: "mg6BAte4"
 
+  plug CORSPlug,
+    origin: ["http://localhost:4000", "https://cffd-live.herokuapp.com", "https://live.cffd.ink"]
+
   plug CffdLiveWeb.Router
 end

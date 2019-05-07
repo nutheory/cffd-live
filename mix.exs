@@ -47,7 +47,8 @@ defmodule CffdLive.MixProject do
       {:distillery, "~> 2.0"},
       {:argon2_elixir, "~> 1.2"},
       {:guardian, "~> 1.2"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:cors_plug, "~> 1.5"}
     ]
   end
 
