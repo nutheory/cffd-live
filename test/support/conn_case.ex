@@ -20,7 +20,7 @@ defmodule CffdLiveWeb.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
       alias CffdLiveWeb.Router.Helpers, as: Routes
-
+      # import CffdLive.Factory
       # The default endpoint for testing
       @endpoint CffdLiveWeb.Endpoint
     end

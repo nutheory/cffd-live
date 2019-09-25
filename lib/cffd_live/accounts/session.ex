@@ -5,8 +5,6 @@ defmodule CffdLive.Accounts.Session do
   def authenticate(args) do
     user = Repo.get_by(User, username: String.downcase(args.username))
 
-    IO.inspect(user, label: "USER AUTH")
-
     case check_password(user, args) do
       true -> {:ok, user}
       _ -> {:error, "Invalid login."}

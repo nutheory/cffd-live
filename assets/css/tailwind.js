@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    // Some useful comment
+    extend: {
+      colors: {
+        cffd: '#22292f'
+      }
+    }
   },
   variants: {
     // Some useful comment

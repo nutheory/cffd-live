@@ -8,8 +8,7 @@ defmodule CffdLiveWeb.Router do
     plug Phoenix.LiveView.Flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug CffdLive.Plugs.Auth
-    plug :put_layout, {CffdLiveWeb.LayoutView, :app}
+    plug CffdLive.Plugs.Auth, app_layout: :app, public_layout: :public
   end
 
   pipeline :api do
@@ -19,7 +18,11 @@ defmodule CffdLiveWeb.Router do
   scope "/", CffdLiveWeb do
     pipe_through :browser
 
-    # get "/", PageController, :index
+    get "/", MainController, :index, session: [:user_id]
+    # live "/", DashboardLive.Main, session: [:user_id]
+    live "/account/registration", AccountLive.Registration, session: %{}
+    live "/edit", UserLive.Edit, session: [:user_id]
+    # get "/users/register", UserController, :new
     get "/login", SessionController, :new
     get "/logout", SessionController, :delete
     resources "/users", UserController

@@ -1,5 +1,8 @@
 # CffdLive
 
+MIX_ENV=test mix ecto.reset
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

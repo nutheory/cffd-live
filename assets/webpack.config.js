@@ -39,7 +39,7 @@ module.exports = (env, options) => ({
               ident: 'postcss',
               plugins: [
                 postcssPresetEnv({ stage: 0 }),
-                require('tailwindcss'),
+                require('tailwindcss')('./css/tailwind.js'),
                 require('autoprefixer')
               ]
             } }

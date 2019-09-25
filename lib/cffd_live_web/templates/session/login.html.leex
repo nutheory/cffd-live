@@ -1,5 +1,5 @@
-<div class="">
-  <div class="wrapper short">
+<div class="container mt-32 mx-auto">
+  <div class="w-full lg:w-2/5 mx-auto bg-cffd m-4 border border-black shadow-lg px-6 py-4">
     <h1 class="graffiti text-4xl text-purple-700">Authorize</h1>
     <%= form_for @conn, Routes.session_path(@conn, :create), [method: :post, as: :user], fn f -> %>
       <div class="mb-4">
@@ -11,7 +11,7 @@
         <%= error_tag f, :password %>
       </div>
       <div class="">
-        <%= submit "Save", class: "submit" %>
+        <%= submit "Login", class: "submit" %>
       </div>
     <% end %>
   </div>

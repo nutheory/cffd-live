@@ -11,4 +11,4 @@
                         'Elixir.Artificery.Console.Table',
                         'Elixir.Artificery.Entry','Elixir.Artificery.Option']},
               {registered,[]},
-              {vsn,"0.4.1"}]}.
+              {vsn,"0.4.2"}]}.

@@ -57,6 +57,8 @@ config :cffd_live, CffdLiveWeb.Endpoint,
     ]
   ]
 
+config :cffd_live, :github_token, System.get_env("GITHUB_TOKEN")
+
 config :cffd_live, CffdLive.Guardian,
   issuer: "cffdlive",
   secret_key: System.get_env("GUARDIAN_SECRET")

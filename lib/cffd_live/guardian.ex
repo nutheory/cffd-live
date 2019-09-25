@@ -1,5 +1,6 @@
 defmodule CffdLive.Guardian do
   use Guardian, otp_app: :cffd_live
+  alias CffdLive.Accounts
   alias CffdLive.Accounts.User
 
   def subject_for_token(%User{} = user, _claims) do
@@ -11,7 +12,7 @@ defmodule CffdLive.Guardian do
   end
 
   def resource_from_claims(%{"sub" => id}) do
-    case Accounts.get_user(id) do
+    case Accounts.get_user!(id) do
       nil -> {:error, :resource_not_found}
       user -> {:ok, user}
     end

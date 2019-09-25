@@ -8,12 +8,9 @@ defmodule CffdLive.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
       CffdLive.Repo,
-      # Start the endpoint when the application starts
-      CffdLiveWeb.Endpoint
-      # Starts a worker by calling: CffdLive.Worker.start_link(arg)
-      # {CffdLive.Worker, arg},
+      CffdLiveWeb.Endpoint,
+      CffdLiveWeb.Presence
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

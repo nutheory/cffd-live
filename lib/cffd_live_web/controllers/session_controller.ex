@@ -1,6 +1,5 @@
 defmodule CffdLiveWeb.SessionController do
   use CffdLiveWeb, :controller
-  alias Phoenix.LiveView
 
   alias CffdLive.Accounts
 
@@ -11,6 +10,8 @@ defmodule CffdLiveWeb.SessionController do
   def create(conn, %{
         "user" => %{"username_or_email" => username_or_email, "password" => password}
       }) do
+    IO.inspect(password, label: "PASSS")
+
     case Accounts.authenticate(username_or_email, password) do
       {:ok, user} ->
         conn
@@ -25,6 +26,8 @@ defmodule CffdLiveWeb.SessionController do
         |> redirect(to: Routes.session_path(conn, :new))
 
       {:error, :not_found} ->
+        IO.inspect(username_or_email, label: "username_or_email")
+
         conn
         |> put_flash(:error, "Not Found.")
         |> redirect(to: Routes.session_path(conn, :new))
@@ -35,6 +38,6 @@ defmodule CffdLiveWeb.SessionController do
     conn
     |> configure_session(drop: true)
     |> put_flash(:success, "You have logged out.")
-    |> redirect(to: "/login")
+    |> redirect(to: "/")
   end
 end
