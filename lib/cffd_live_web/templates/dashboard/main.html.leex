@@ -1,0 +1,6 @@
+<div>
+  <%= live_render(@socket, CffdLiveWeb.DashboardLive.Header, session: %{user: @current_user}) %>
+  <main role="main" class="container mx-auto">
+    <%= live_render(@socket, CffdLiveWeb.DashboardLive.GithubSearch, session: %{user: @current_user}) %>
+  </main>
+</div>

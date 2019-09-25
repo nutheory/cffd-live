@@ -1,0 +1,16 @@
+<div class="container mt-32 mx-auto p-4">
+  <div class="w-full lg:w-2/5 mx-auto bg-cffd m-4 border border-black shadow-lg">
+    <div class="mx-8 my-6">
+      <h1 class="graffiti text-4xl text-purple-700">edit user</h1>
+      <%= form_for assigns.changeset, "#", [phx_blur: :validate, phx_submit: :save], fn uf -> %>
+        <%= render "_form.html", uf: uf %>
+        <%= inputs_for uf, :credentials, fn cf -> %>
+          <%= render "_cred_form.html", cf: cf %>
+        <% end %>
+        <div class="">
+          <%= submit "Save", class: "submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

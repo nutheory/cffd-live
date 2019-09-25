@@ -1,0 +1,14 @@
+<div>
+  <%= if @online_users do %>
+    <%= for {user_key, %{metas: metas}} <- @online_users do %>
+      <div><%= user_key %> (<%= hd(metas).name %>) 
+        <%= @socket.connected? %>
+        <%= if @socket && @socket.connected? do %>True<% else %>False<% end %>
+        <%= if @current_user && @current_user.id == hd(metas).id do %>
+          <%= link "Edit", to: Routes.user_path(@socket, :edit, hd(metas).id) %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+

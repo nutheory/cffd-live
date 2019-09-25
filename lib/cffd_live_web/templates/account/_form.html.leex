@@ -1,0 +1,10 @@
+<div class="flex flex-wrap -mx-4">
+  <div class="w-full md:w-1/2 mb-4 px-4">
+    <%= text_input @af, :company_name, placeholder: "Company Name" %>
+    <%= error_tag @af, :company_name %>
+  </div>
+  <div class="w-full md:w-1/2 mb-4 px-4">
+    <%= text_input @af, :phone, placeholder: "Phone" %>
+    <%= error_tag @af, :phone %>
+  </div>
+</div>
